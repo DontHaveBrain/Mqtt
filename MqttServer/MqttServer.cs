@@ -66,7 +66,7 @@ namespace MqttServer
         private void MqttServer_OnClientApplicationMessageReceive(MqttSession session, MqttClientApplicationMessage message)
         {
             Console.WriteLine(message.CreateTime + "=====>" + "Mqtt服务器接收:" + message.Topic + ":  " + Encoding.UTF8.GetString(message.Payload));
-            ReceiveMsg?.Invoke(message.Topic, message.Payload);
+            ReceiveMsg?.Invoke(message.Topic, message.Payload); 
         }
     }
 }
